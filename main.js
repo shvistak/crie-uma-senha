@@ -31,3 +31,5 @@ function geraSenha(){
     }
 }
 campoSenha.value = senha;
+const checkbox = document.querySelectorAll(‘.checkbox’);
+console.log(checkbox);
