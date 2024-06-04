@@ -3,6 +3,7 @@ const numeroSenha = document.querySelector('.parametro-senha-texto');
 let tamanhoSenha = 12;
 senha.textContent = tamanhoSenha;
 const botoes = document.querySelector('.parametro-senha-botao');
+const forcaSenha = document.querySelector('.forca');
 botoes[0].onclick = diminuiTamanho;
 botoes[1].onclick = aumentaTamanho;
 function diminuiTamanho(){
@@ -33,3 +34,11 @@ function geraSenha(){
 campoSenha.value = senha;
 const checkbox = document.querySelectorAll(‘.checkbox’);
 console.log(checkbox);
+
+classificaSenha();
+function classificaSenha(){
+    forcaSenha.classList.remove('fraca','media','forte');
+    if (tamanhoSenha > 11){
+        forcaSenha.classList.add('forte');
+    }
+}
